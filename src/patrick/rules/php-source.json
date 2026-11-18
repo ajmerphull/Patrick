@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "PHP-SOURCE-EVAL",
+      "title": "Dynamic code evaluation",
+      "severity": "high",
+      "summary": "The PHP code calls eval; review whether untrusted data can influence evaluated code.",
+      "pattern": "eval(",
+      "references": [
+        "https://www.php.net/manual/en/function.eval.php"
+      ]
+    },
+    {
+      "id": "PHP-SOURCE-UNSERIALIZE",
+      "title": "Deserialization of PHP values",
+      "severity": "high",
+      "summary": "The PHP code calls unserialize; review whether input is untrusted and allowed_classes is restricted.",
+      "pattern": "unserialize(",
+      "references": [
+        "https://www.php.net/manual/en/function.unserialize.php"
+      ]
+    },
+    {
+      "id": "PHP-SOURCE-SHELL-EXEC",
+      "title": "Shell command execution",
+      "severity": "medium",
+      "summary": "The PHP code calls shell_exec; review whether input is externally controlled and a safer API is available.",
+      "pattern": "shell_exec(",
+      "references": [
+        "https://www.php.net/manual/en/function.shell-exec.php"
+      ]
+    },
+    {
+      "id": "PHP-SOURCE-SYSTEM",
+      "title": "Operating-system command execution",
+      "severity": "medium",
+      "summary": "The PHP code calls system; review whether input is externally controlled and arguments are safely constrained.",
+      "pattern": "system(",
+      "references": [
+        "https://www.php.net/manual/en/function.system.php"
+      ]
+    }
+  ]
+}

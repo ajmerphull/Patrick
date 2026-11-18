@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "CVE-2026-109618",
+      "title": "PHP out-of-memory state corruption",
+      "severity": "critical",
+      "component": "php-core",
+      "summary": "PHP request memory may be left in an invalid state after an out-of-memory condition.",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
+        "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+      ],
+      "published_at": "2026-10-21T14:17:09.357",
+      "last_modified": "2026-11-16T16:54:58.603",
+      "package_name": "php-src",
+      "source_urls": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
+        "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+      ],
+      "fixed_versions": {
+        "8.2": "8.2.35",
+        "8.3": "8.3.36",
+        "8.4": "8.4.27",
+        "8.5": "8.5.12"
+      }
+    },
+    {
+      "id": "CVE-2026-109619",
+      "title": "PHP stale global state use-after-free",
+      "severity": "critical",
+      "component": "php-core",
+      "summary": "PHP global state may retain a pointer into freed request memory.",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
+        "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+      ],
+      "published_at": "2026-10-21T14:17:09.823",
+      "last_modified": "2026-11-16T16:17:46.967",
+      "package_name": "php-src",
+      "source_urls": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
+        "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+      ],
+      "fixed_versions": {
+        "8.2": "8.2.35",
+        "8.3": "8.3.36",
+        "8.4": "8.4.27",
+        "8.5": "8.5.12"
+      }
+    }
+  ]
+}
